@@ -9,9 +9,6 @@ from datetime import timedelta
 modelo = joblib.load("modelo_entrenado.pkl")
 
 app = FastAPI()
-application = app  # <- Esto es importante para Beanstalk
-
-# Este es el punto de entrada WSGI que necesita EB
 
 class DatosEntrada(BaseModel):
     fecha_facturacion: str  # formato YYYY-MM-DD
